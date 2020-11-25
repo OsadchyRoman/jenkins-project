@@ -12,7 +12,7 @@ pipeline {
         stage('Build') { 
             steps {
 				echo "${params.buildTool}"
-                sh 'mvn -B -DskipTests clean package' 
+                cmd("mvn -B -DskipTests clean package") 
             }
         }
     }
